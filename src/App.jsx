@@ -1,8 +1,13 @@
+import GlobalStyle from "./styles/globalStyles";
+
+import { Login } from "./pages/Login";
+
 function App() {
  
   return (
     <>
-      oi
+      <GlobalStyle />
+      <Login/>
     </>
   )
 }
