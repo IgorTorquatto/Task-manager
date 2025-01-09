@@ -1,14 +1,19 @@
 import GlobalStyle from "./styles/globalStyles";
+import { BrowserRouter } from "react-router-dom";
 
-import { Login } from "./pages/Login";
+import { Router } from "./Router";
+
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'; 
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 function App() {
  
   return (
-    <>
-      <GlobalStyle />
-      <Login/>
-    </>
+   <BrowserRouter>
+    <GlobalStyle/>
+    <Router/>
+   </BrowserRouter>
   )
 }
 

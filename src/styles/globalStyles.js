@@ -5,10 +5,13 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     font-family: "Roboto", serif;
+    box-sizing: border-box;
+    border: none;
     }
 
     body{
-    background-color: #081229;
+    height: 100vh;
+    background-color: #508bfc;
     }
 `;
 

@@ -8,9 +8,9 @@ import {
   MDBInput,
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
-import styles from "./Login.module.css";
+import styles from "./Register.module.css";
 
-export const Login = () => {
+export const Register = () => {
   return (
     <MDBContainer>
       <MDBRow
@@ -18,11 +18,18 @@ export const Login = () => {
       >
         <MDBCol col="12">
           <MDBCard className={`my-5 mx-auto ${styles.container}`}>
-            <div className={styles.loginHeader}>
-              <h2 className="fw-bold text-center">Login</h2>
+            <div className={styles.registerHeader}>
+              <h2 className="fw-bold text-center">Cadastro</h2>
             </div>
             <MDBCardBody className="p-5 w-100 d-flex flex-column justify-content-start">
               <MDBInput
+                wrapperClass="mb-4 w-100"
+                label="Nome"
+                id="formControlLg"
+                type="text"
+                size="lg"
+              />
+               <MDBInput
                 wrapperClass="mb-4 w-100"
                 label="E-mail"
                 id="formControlLg"
@@ -36,13 +43,20 @@ export const Login = () => {
                 type="password"
                 size="lg"
               />
+              <MDBInput
+                wrapperClass="mb-4 w-100"
+                label="Confirmar senha"
+                id="formControlLg"
+                type="password"
+                size="lg"
+              />
 
-              <MDBBtn className={styles.loginBtn} size="lg">
-                Entrar
+              <MDBBtn className={styles.registerBtn} size="lg">
+                Cadastrar
               </MDBBtn>
               <div className={styles.sectionLink}>
                 <p className={styles.registerLink}>
-                  Não tem uma conta? <Link to="/register">Registrar</Link>
+                  Já possui uma conta? <Link to="/">Entrar</Link>
                 </p>
               </div>
             </MDBCardBody>
