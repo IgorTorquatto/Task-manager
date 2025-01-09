@@ -4,8 +4,7 @@ const GlobalStyle = createGlobalStyle`
     *{ 
     margin:0;
     padding:0;
-    font-family: 'Lato',sans-serif;
-    color: #FFFFFF;
+    font-family: "Roboto", serif;
     }
 
     body{
