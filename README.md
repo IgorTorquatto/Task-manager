@@ -40,3 +40,33 @@ A primeira página será a de login do usuário, com email e senha.
 8. Criar o arquivo `Router.jsx` em `src`, importar cada página/componente e relacionar a um `path`.
 9. Atualizar o arquivo `App.jsx` para que ele contenha o `BrowserRouter`.
 10. Criar na pasta `Register`, que está dentro da pasta `pages`, uma nova página.
+
+## 3ª Etapa: Back-end
+
+### Passos para configuração do back-end:
+
+1. Instalar o Express e criar o código inicial do back-end.
+2. Criar o banco de dados relacional utilizando MySQL:
+   - Nome do banco de dados: `gerenciador_de_tarefas`
+   - Username: `user_gerenciador_de_tarefas`
+   - Password: `123456`
+   - Criar um arquivo `mysql_config.js` para configurar e exportar um módulo com os dados do banco de dados.
+3. Realizar a conexão do código Node.js com o banco de dados e realizar testes para verificar o funcionamento.
+4. Verificar se as dependências iniciais do projeto foram adicionadas corretamente (`mysql2`, `cors`, `express`, `body-parser`) e utilizar os métodos:
+   - `use(cors())` para habilitar o CORS.
+   - `use(bodyParser.json())` para processar JSON no corpo das requisições.
+5. Criar uma tabela `users` no banco de dados com as seguintes colunas:
+   - `id`
+   - `name`
+   - `email`
+   - `password`
+   - `created_at`
+   - `updated_at`
+   - `deleted_at`
+6. Criar uma rota do tipo POST para adicionar os dados dos usuários na tabela `users` do banco de dados.
+
+## 4ª Etapa: Front-end
+
+### Validação do formulário de cadastro de usuário:
+
+1. Criar a validação do formulário de cadastro do usuário utilizando a biblioteca `yup`.
