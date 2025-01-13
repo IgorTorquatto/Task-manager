@@ -1,7 +1,6 @@
 .container{
     border-radius: '1rem';
     max-width: 500px;
-    height: 600px !important;
 }
 
 .loginHeader{
@@ -31,4 +30,5 @@
 .loginBtn{
     font-size: 18px !important;
     text-transform: capitalize !important;
+    width: 100%;
 }
