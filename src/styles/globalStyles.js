@@ -9,9 +9,9 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     }
 
-    body{
+    body {
     height: 100vh;
-    background-color: #508bfc;
+    background: radial-gradient(circle, #508bfc, #1c3a70);
     }
 `;
 
