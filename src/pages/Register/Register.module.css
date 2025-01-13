@@ -1,7 +1,6 @@
 .container{
     border-radius: '1rem';
     max-width: 500px;
-    height: 600px !important;
 }
 
 .registerHeader{
@@ -25,6 +24,11 @@
     height: 100px;
     display: flex;
     align-items: end;
+    justify-content: center;
+}
+
+.divRegisterBtn{
+    display: flex;
     justify-content: center;
 }
 
