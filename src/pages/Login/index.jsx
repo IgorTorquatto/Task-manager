@@ -12,6 +12,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import styles from "./Login.module.css";
 
 //schema de validação
@@ -40,14 +42,30 @@ export const Login = () => {
       });
 
       if (response.status === 200) {
-        navigate("/home");
+        toast.success("Login realizado com sucesso!", {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+        });
+
+        setTimeout(() => {
+          navigate("/home");
+        }, 3000);
       }
     } catch (error) {
-      console.error("Erro ao fazer login: ", error);
+      toast.error("Erro ao fazer login. Verifique suas credenciais.", {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        theme: "colored"
+      });
+      console.error("Erro ao realizar login: ", error);
     }
   };
+
   return (
     <MDBContainer>
+      <ToastContainer />
       <MDBRow
         className={`d-flex justify-content-center align-items-center h-100`}
       >

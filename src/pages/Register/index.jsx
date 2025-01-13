@@ -12,6 +12,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import styles from "./Register.module.css";
 
 //schema de validação
@@ -48,16 +50,30 @@ export const Register = () => {
       });
 
       if (response.status === 201) {
-        navigate("/");
+        toast.success("Usuário registrado com sucesso! Encaminhando para página de login... ", {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+        });
+
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
       }
     } catch (error) {
-      console.log("Erro ao cadastrar usuário", error);
-      alert("Erro ao cadastrar. Por favor, tente novamente.");
+      toast.error("Erro ao cadastrar usuário. Tente novamente.", {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        theme: "colored"
+      });
+      console.error("Erro ao cadastrar usuário: ", error);
     }
   };
 
   return (
     <MDBContainer>
+      <ToastContainer/>
       <MDBRow
         className={`d-flex justify-content-center align-items-center h-100`}
       >
