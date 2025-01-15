@@ -42,6 +42,9 @@ export const Login = () => {
       });
 
       if (response.status === 200) {
+        const userId = response.data.user.id;
+        localStorage.setItem("userId",userId);
+        
         toast.success("Login realizado com sucesso!", {
           position: "bottom-right",
           autoClose: 3000,
