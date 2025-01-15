@@ -67,6 +67,30 @@ A primeira página será a de login do usuário, com email e senha.
 
 ## 4ª Etapa: Front-end
 
-### Validação do formulário de cadastro de usuário:
+### Criar a validação do formulário de registro do usuário e enviar dados para o back-end:
 
-1. Criar a validação do formulário de cadastro do usuário utilizando a biblioteca `yup`.
+1. Instalar as dependências necessárias: `react-hook-form`, `@hookform/resolvers`, `yup`, `axios`.
+2. Criar o schema de validação dos campos utilizando `yup`.
+3. Criar uma função assíncrona `onSubmit` que:
+   - Utiliza o `axios` para fazer uma requisição POST ao back-end.
+   - Envia os dados preenchidos no formulário para serem armazenados no banco de dados.
+
+## 5ª Etapa: Back-end
+
+### Criptografar senhas dos usuários e criar rota para verificar credenciais de login:
+
+1. Criptografar as senhas dos usuários ao enviar o formulário utilizando a biblioteca `bcrypt`.
+2. Criar os arquivos `package.json` e `yarn.lock` para listar as dependências necessárias ao projeto.
+3. Criar a rota `/login_user` para verificar se os dados do usuário enviados pelo front-end existem no banco de dados.
+
+## 6ª Etapa: Front-end
+
+### Criar validação e integração da página de login:
+
+1. Criar a validação do formulário da página de login utilizando `yup`.
+2. Apresentar mensagens de erro se algum campo obrigatório não for preenchido.
+3. Fazer uma requisição ao endpoint `/login_user` no back-end para verificar a existência do usuário no banco de dados:
+   - Caso a resposta do servidor tenha código de status `200`, o login foi bem-sucedido e o usuário será redirecionado para a página Home.
+4. Apresentar um toast de sucesso ao logar e redirecionar o usuário para `/home` ou, em caso de erro, apresentar um toast de erro.
+5. Apresentar toasts de sucesso ou erro também na página de Registro:
+   - Utilizar a biblioteca `react-toastify`.
