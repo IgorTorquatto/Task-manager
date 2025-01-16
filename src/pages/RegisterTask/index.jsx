@@ -23,7 +23,7 @@ export const RegisterTask = () => {
 
       if (response.status === 201) {
         setNewTask({ title: "", description: "" }); // Limpar os campos do formulário
-        toast.success("Usuário cadastrado com sucesso!", {
+        toast.success("Tarefa cadastrada com sucesso!", {
           position: "bottom-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -34,7 +34,7 @@ export const RegisterTask = () => {
         },2000);
       }
     } catch (error) {
-        toast.error("Erro ao cadastrar usuário. Preencha todos os campos.", {
+        toast.error("Erro ao cadastrar tarefa. Por favor, preencha todos os campos.", {
             position: "bottom-right",
             autoClose: 4000,
             hideProgressBar: false,
