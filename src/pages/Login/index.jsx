@@ -42,12 +42,13 @@ export const Login = () => {
       });
 
       if (response.status === 200) {
+        //Guardamos o id do usuário em localstoage 
         const userId = response.data.user.id;
         localStorage.setItem("userId",userId);
         
         toast.success("Login realizado com sucesso!", {
           position: "bottom-right",
-          autoClose: 3000,
+          autoClose: 2000,
           hideProgressBar: false,
         });
 
